@@ -17,4 +17,5 @@ in project {
   overlays = [
     (import ./haskell/pkgs-overlay.nix)
   ];
+  compiler = "ghc8102";
 }
