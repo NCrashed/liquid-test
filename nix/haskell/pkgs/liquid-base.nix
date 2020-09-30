@@ -1,5 +1,5 @@
 { mkDerivation, base, Cabal, fetchgit, liquid-ghc-prim
-, liquidhaskell, stdenv
+, liquidhaskell, stdenv, z3sys
 }:
 mkDerivation {
   pname = "liquid-base";
@@ -12,4 +12,6 @@ mkDerivation {
   homepage = "https://github.com/ucsd-progsys/liquidhaskell";
   description = "Drop-in base replacement for LiquidHaskell";
   license = stdenv.lib.licenses.bsd3;
+  librarySystemDepends = [ z3sys ];
+  doHaddock = false;
 }

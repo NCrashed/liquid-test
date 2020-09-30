@@ -1,5 +1,5 @@
 { mkDerivation, base, bytestring, Cabal, containers, fetchgit
-, liquid-base, liquidhaskell, stdenv
+, liquid-base, liquidhaskell, stdenv, z3sys
 }:
 mkDerivation {
   pname = "liquid-prelude";
@@ -13,4 +13,6 @@ mkDerivation {
   homepage = "https://github.com/ucsd-progsys/liquidhaskell";
   description = "General utility modules for LiquidHaskell";
   license = stdenv.lib.licenses.bsd3;
+  librarySystemDepends = [ z3sys ];
+  doHaddock = false;
 }

@@ -1,5 +1,5 @@
 { mkDerivation, base, bytestring, Cabal, fetchgit, liquid-base
-, liquidhaskell, stdenv
+, liquidhaskell, stdenv, z3sys
 }:
 mkDerivation {
   pname = "liquid-bytestring";
@@ -12,4 +12,6 @@ mkDerivation {
   homepage = "https://github.com/ucsd-progsys/liquidhaskell";
   description = "LiquidHaskell specs for the bytestring package";
   license = stdenv.lib.licenses.bsd3;
+  librarySystemDepends = [ z3sys ];
+  doHaddock = false;
 }

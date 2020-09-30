@@ -1,5 +1,5 @@
 { mkDerivation, base, Cabal, fetchgit, ghc-prim, liquidhaskell
-, stdenv
+, stdenv, z3sys
 }:
 mkDerivation {
   pname = "liquid-ghc-prim";
@@ -12,4 +12,6 @@ mkDerivation {
   homepage = "https://github.com/ucsd-progsys/liquidhaskell";
   description = "Drop-in ghc-prim replacement for LiquidHaskell";
   license = stdenv.lib.licenses.bsd3;
+  librarySystemDepends = [ z3sys ];
+  doHaddock = false;
 }

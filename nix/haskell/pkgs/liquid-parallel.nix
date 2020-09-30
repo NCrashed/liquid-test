@@ -1,5 +1,5 @@
 { mkDerivation, base, Cabal, fetchgit, liquid-base, liquidhaskell
-, parallel, stdenv
+, parallel, stdenv, z3sys
 }:
 mkDerivation {
   pname = "liquid-parallel";
@@ -12,4 +12,6 @@ mkDerivation {
   homepage = "https://github.com/ucsd-progsys/liquidhaskell";
   description = "LiquidHaskell specs for the parallel package";
   license = stdenv.lib.licenses.bsd3;
+  librarySystemDepends = [ z3sys ];
+  doHaddock = false;
 }

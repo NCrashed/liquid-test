@@ -1,5 +1,5 @@
 { mkDerivation, base, Cabal, containers, fetchgit, liquid-base
-, liquidhaskell, stdenv
+, liquidhaskell, stdenv, z3sys
 }:
 mkDerivation {
   pname = "liquid-containers";
@@ -12,4 +12,6 @@ mkDerivation {
   homepage = "https://github.com/ucsd-progsys/liquidhaskell";
   description = "LiquidHaskell specs for the containers package";
   license = stdenv.lib.licenses.bsd3;
+  librarySystemDepends = [ z3sys ];
+  doHaddock = false;
 }
