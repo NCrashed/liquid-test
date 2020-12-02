@@ -7,5 +7,5 @@ let
   dontHaddock = lib.dontHaddock;
 in
 ghc-override "ghc8102" ( self: super: {
-  liquidhaskell-test = dontHaddock (addSolver super.liquidhaskell-test);
+  liquidhaskell-test = addSolver super.liquidhaskell-test;
 }) super
