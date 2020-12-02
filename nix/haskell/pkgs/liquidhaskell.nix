@@ -6,7 +6,7 @@
 , pretty, process, split, stdenv, stm, string-conv, syb, tagged
 , tasty, tasty-ant-xml, tasty-golden, tasty-hunit, tasty-rerun
 , template-haskell, temporary, text, time, transformers
-, unordered-containers, vector, z3
+, unordered-containers, vector, z3, th-compat
 }:
 mkDerivation {
   pname = "liquidhaskell";
@@ -21,7 +21,7 @@ mkDerivation {
     ghc-boot ghc-paths ghc-prim githash gitrev hashable hscolour
     liquid-fixpoint megaparsec mtl optics optparse-applicative
     optparse-simple pretty split syb template-haskell temporary text
-    time transformers unordered-containers vector
+    time transformers unordered-containers vector th-compat
   ];
   executableHaskellDepends = [ base ];
   testHaskellDepends = [

@@ -4,7 +4,7 @@
 , intern, megaparsec, mtl, nettools, ocaml, parallel
 , parser-combinators, pretty, process, stdenv, stm, syb, tasty
 , tasty-ant-xml, tasty-hunit, tasty-rerun, text, text-format
-, transformers, unordered-containers, z3
+, transformers, unordered-containers, z3, aeson
 }:
 mkDerivation {
   pname = "liquid-fixpoint";
@@ -18,7 +18,7 @@ mkDerivation {
     ansi-terminal array ascii-progress async attoparsec base binary
     boxes cereal cmdargs containers deepseq directory fgl filepath
     hashable intern megaparsec mtl parallel parser-combinators pretty
-    process syb text text-format transformers unordered-containers
+    process syb text text-format transformers unordered-containers aeson
   ];
   executableHaskellDepends = [ base ];
   executableSystemDepends = [ ocaml ];

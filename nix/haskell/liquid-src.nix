@@ -1,6 +1,6 @@
 {
   url = "https://github.com/ucsd-progsys/liquidhaskell.git";
-  sha256 = "12mz897wirkw5ram4kdwslzlc6n0w1ykj5gwsy8qxs6yzpn1n2j3";
-  rev = "c56b7a01d3aa779e1e29e75951d1e00e9e8024cc";
+  sha256 = "1dz71474xm2b5h32hlvn7kcga5msidkgqhxw2x34myl9fr8qqlix";
+  rev = "bc39f4bde76b58a61ecb3b2adbba3868955157cc";
   fetchSubmodules = true;
 }
